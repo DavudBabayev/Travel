@@ -1,0 +1,54 @@
+.menudiv{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background-color: rgba(82, 182, 245, 0.9);
+    z-index: 10000000;
+    display: none;
+    .bi-x{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 50px;
+        cursor: pointer;
+    }
+    .menu{
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 50px;
+        gap: 10px;
+        a, li{
+            color: white;
+            font-size: 20px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        li{
+            cursor: pointer;
+            .drop{
+                position: absolute;
+                top: 35px;
+                width: 200px;
+                padding: 15px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                transition: all 0.2s ease;
+                opacity: 0;
+                z-index: -101;
+                a{
+                    color: white;
+                }
+            }
+            &:hover{
+                margin-bottom: 170px;
+                .drop{
+                    opacity: 1;
+                    z-index: 101;
+                }
+            }
+        }
+    }
+}
