@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container{
+    margin: auto;
+    padding: 0 32px;
+    max-width: 1300px;
+}
+
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+@import 'nav';
+@import 'section1';
+@import 'section2';
+@import 'section3';
+@import 'section4';
+@import 'footer';

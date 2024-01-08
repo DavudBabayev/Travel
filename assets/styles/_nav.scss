@@ -1,0 +1,90 @@
+nav{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 101;
+    .navcon{
+        width: 100%;
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .travel{
+            width: 150px;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+        .menu{
+            width: 60%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            a, li{
+                color: white;
+                font-size: 20px;
+                position: relative;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    height: 2px;
+                    background-color: white;
+                    bottom: -10px;
+                    left: 0;
+                    transition: all 0.3s ease;
+                }
+                &:hover{
+                    &::after{
+                        width: 100%;
+                    }
+                }
+            }
+            li{
+                cursor: pointer;
+                .drop{
+                    position: absolute;
+                    top: 35px;
+                    width: 200px;
+                    padding: 15px;
+                    background-color: white;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    transition: all 0.2s ease;
+                    opacity: 0;
+                    z-index: -101;
+                    a{
+                        color: black;
+                    }
+                }
+                &:hover{
+                    .drop{
+                        opacity: 1;
+                        z-index: 101;
+                    }
+                }
+            }
+        }
+        .bi-list{
+            font-size: 28px;
+            color: white;
+            cursor: pointer;
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    nav{
+        .navcon{
+            .menu{
+                display: none;
+            }
+            .bi-list{
+                display: block;
+            }
+        }
+    }
+}

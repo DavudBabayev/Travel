@@ -1,0 +1,49 @@
+.section3 {
+    width: 100%;
+
+    .cards {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+        div {
+            flex: 1 1 50%;
+            max-width: 50%;            
+            background-color: #efefef;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .text {
+
+            padding: 100px 75px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            justify-content: center;
+
+            h1 {
+                font-weight: 400;
+                letter-spacing: 2px;
+            }
+
+            p {
+                color: rgb(104, 103, 103);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .section3 {
+        .cards {
+            div {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+        }
+    }
+}

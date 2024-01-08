@@ -1,0 +1,64 @@
+.section2 {
+    width: 100%;
+    margin: 50px 0;
+
+    .sec2con {
+        width: 100%;
+
+        .card {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+
+            div {
+                flex: 1 1 calc(25% - 20px);
+                max-width: calc(25% - 20px);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                padding: 10px;
+                text-align: center;
+
+                img {
+                    width: 64px;
+                    height: 64px;
+                }
+                h2{
+                    font-weight: 400;
+                }
+                p{
+                    color: rgb(66, 66, 66);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) and (min-width: 561px) {
+    .section2{
+        .sec2con{
+            .card{
+                div{
+                    flex: 1 1 calc(50% - 20px);
+                    max-width: calc(50% - 20px);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .section2{
+        .sec2con{
+            .card{
+                div{
+                    flex: 1 1 100%;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}

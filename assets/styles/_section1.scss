@@ -1,0 +1,42 @@
+.section1{
+    width: 100%;
+    height: 800px;
+    padding-top: 100px;
+    background-image: url('https://demo.kaliumtheme.com/travel/wp-content/uploads/2017/06/C5gsPJq.jpg');
+    background-repeat: no-repeat;
+    .sec1con{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        .text{
+            width: 50%;
+            text-align: center;
+            color: white;
+            h1{
+                font-size: 70px;
+            }
+            p{
+                font-size: 20px;
+                position: relative;
+            }
+        }
+        .top,.bottom{
+            width: 2px;
+            height: 100px;
+            background-color: #fff;
+        }
+    }
+}
+@media screen and (max-width: 992px) {
+    .section1{
+        .sec1con{
+            .text{
+                width: 100%;
+            }
+        }
+    }
+}
