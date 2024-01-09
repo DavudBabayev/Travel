@@ -77,7 +77,7 @@ nav .navcon .menu li .drop {
   gap: 10px;
   transition: all 0.2s ease;
   opacity: 0;
-  z-index: -101;
+  z-index: -99999999999;
 }
 nav .navcon .menu li .drop a {
   color: black;
@@ -202,6 +202,18 @@ nav .navcon .bi-list {
 .section2 .sec2con {
   width: 100%;
 }
+.section2 .sec2con .other {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 40%;
+  margin-bottom: 50px;
+}
+.section2 .sec2con .other #search, .section2 .sec2con .other .sort {
+  height: 30px;
+  padding-left: 5px;
+  outline: none;
+}
 .section2 .sec2con .card {
   width: 100%;
   display: flex;
@@ -218,6 +230,22 @@ nav .navcon .bi-list {
   gap: 10px;
   padding: 10px;
   text-align: center;
+  border: 2px solid white;
+}
+.section2 .sec2con .card div span {
+  width: 50%;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.section2 .sec2con .card div span a {
+  color: black;
+  font-size: 24px;
+}
+.section2 .sec2con .card div span a:hover {
+  transform: scale(1.2);
 }
 .section2 .sec2con .card div img {
   width: 64px;
@@ -228,6 +256,14 @@ nav .navcon .bi-list {
 }
 .section2 .sec2con .card div p {
   color: rgb(66, 66, 66);
+}
+.section2 .sec2con .card div:hover {
+  border: 2px solid black;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
+}
+.section2 .sec2con .card div:hover span {
+  opacity: 1;
 }
 
 @media screen and (max-width: 992px) and (min-width: 561px) {

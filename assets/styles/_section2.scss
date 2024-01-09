@@ -5,6 +5,19 @@
     .sec2con {
         width: 100%;
 
+        .other{
+            width: 20%;
+            display: flex;
+            justify-content: space-between;
+            margin-left: 40%;
+            margin-bottom: 50px;
+            #search, .sort{
+                height: 30px;
+                padding-left: 5px;
+                outline: none;
+            }
+        }
+
         .card {
             width: 100%;
             display: flex;
@@ -21,6 +34,23 @@
                 gap: 10px;
                 padding: 10px;
                 text-align: center;
+                border: 2px solid white;
+
+                span{
+                    width: 50%;
+                    height: 30px;
+                    display: flex;
+                    justify-content: space-between;
+                    opacity: 0;
+                    transition: all 0.3s ease;
+                    a{
+                        color: black;
+                        font-size: 24px;
+                        &:hover{
+                            transform: scale(1.2);
+                        }
+                    }
+                }
 
                 img {
                     width: 64px;
@@ -31,6 +61,14 @@
                 }
                 p{
                     color: rgb(66, 66, 66);
+                }
+                &:hover{
+                    border: 2px solid black;
+                    border-radius: 15px;
+                    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
+                    span{
+                        opacity: 1;
+                    }
                 }
             }
         }

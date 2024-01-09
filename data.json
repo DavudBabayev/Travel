@@ -1,0 +1,28 @@
+{
+    "data":[
+        {
+            "id": 1,
+            "img": "https://demo.kaliumtheme.com/travel/wp-content/uploads/2017/06/sun-umbrella-1.png",
+            "name": "Tour organizer",
+            "text": "Organize your travel plan in easy steps, visit magnificent world attractions ."
+        },
+        {
+            "id": 2,
+            "img": "https://demo.kaliumtheme.com/travel/wp-content/uploads/2017/06/departures-1.png",
+            "name": "Book a flightr",
+            "text": "Organize your travel plan in easy steps, visit magnificent world attractions ."
+        },
+        {
+            "id": 3,
+            "img": "https://demo.kaliumtheme.com/travel/wp-content/uploads/2017/06/map-1-1.png",
+            "name": "Plan your trip",
+            "text": "Organize your travel plan in easy steps, visit magnificent world attractions ."
+        },
+        {
+            "id": 4,
+            "img": "https://demo.kaliumtheme.com/travel/wp-content/uploads/2017/06/cruise-1.png",
+            "name": "Cruise deals",
+            "text": "Organize your travel plan in easy steps, visit magnificent world attractions ."
+        }
+    ]
+}
