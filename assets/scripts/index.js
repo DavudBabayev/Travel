@@ -27,7 +27,7 @@ window.addEventListener("scroll", () => {
 
 let card = document.querySelector("#card");
 let searchInp = document.querySelector("#search");
-let sort = document.querySelector(".sort");
+let sort = document.querySelector("#sort");
 
 let url = ' http://localhost:3000/data/'
 
@@ -50,9 +50,9 @@ async function getAll() {
         <h2>${element.name}</h2>
         <p>${element.text}</p>
         <span>
-            <a href="#"><i class = "bi bi-arrow-clockwise"></i></a>
-            <a href="#"><i class = "bi bi-info-circle"></i></a>
-            <a href="#"><i class = "bi bi-trash"></i></a>
+            <a href="./add.html?id=${element.id}"><i class = "bi bi-arrow-clockwise"></i></a>
+            <a href="./details.html?id=${element.id}"><i class = "bi bi-info-circle"></i></a>
+            <a onclick = "deleteCard(${element.id})"><i class = "bi bi-trash"></i></a>
         </span>
     </div>
         `
@@ -74,12 +74,20 @@ searchInp.addEventListener("input", element => {
 /////Sort/////
 
 sort.addEventListener('change', (e) => {
-    if (e.target.value == 'A-Z') {
-        filterArr.sort((a, b) => a.name - b.name);
-    } else if (e.target.value == 'Z-A') {
-        filterArr.sort((a, b) => b.name - a.name);
+    if (e.target.value == 'asc') {
+        filterArr.sort((a, b) => a.name.localeCompare(b.name));
+    } else if (e.target.value == 'des') {
+        filterArr.sort((a, b) => b.name.localeCompare(a.name));
     } else {
         filterArr = coppy;
     }
-    getAll()
-})
+    getAll();
+});
+
+/////Delete/////
+
+async function deleteCard(id){
+    let res = await axios.delete(url + id)
+    window.location.reload();
+    return res.data;
+}
