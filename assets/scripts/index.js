@@ -23,6 +23,17 @@ window.addEventListener("scroll", () => {
 })
 
 
+//////////UP///////////
+
+window.addEventListener("scroll", ()=>{
+    if(window.scrollY > 190){
+        document.querySelector("#topBtn").style.right = "20px"
+    } else{
+        document.querySelector("#topBtn").style.right = "-200px"
+    }
+})
+
+
 //////////DATA//////////
 
 let card = document.querySelector("#card");
